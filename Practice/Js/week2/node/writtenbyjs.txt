@@ -1,0 +1,14 @@
+const fs = require("fs");
+//Four methods by FS.
+Check to see if the file exists: fs.existSync();
+//Write a new file or existing one, fs.writerFile.Sync();
+
+
+//Arguments: file to save as a string, data saved character saved
+fs.writerFileSync(writtenbyjs.txt)
+//Use an appendFileSync to update file
+fs.appendFileSync("writtenbyjs.txt)
+
+
+//Delete file, do not use 
+// fileunlinkSync("document.rtf");
