@@ -1,0 +1,19 @@
+{
+  "name": "secondnodeproject",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Danny",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "ldash": "0.0.1-security"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "(secondnodeproject)"
+  ],
+  "description": "Is this OK? (yes) "
+}
