@@ -1,0 +1,103 @@
+<!doctype html>
+
+<html lang="en">
+<body> 
+  h2>My First JavaScript</h2>
+
+  <button type="button"
+  onclick="document.getElementById('demo').innerHTML = Date()">
+  Click me to display Date and Time.</button>
+
+  <head>
+  <meta charset="utf-8">
+
+  <title>Todo "App"</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+</body> 
+</html>
+
+<style>
+body {
+background-color:aqua;
+font-size: 30px;
+line-height:initial;
+color:khaki;
+}
+a:hover{
+  color: rgb(193, 192, 255);
+  background-color: transparent;
+text-decoration: unset;
+}
+ 
+a:active {
+  color: orange;
+
+}
+
+div.background {
+  background: url(klematis.jpg) repeat;
+  border: 15px solid black;
+}
+
+div.transbox {
+  margin: 25px;00006798;
+  border: 1px solid black;
+  opacity: 3.5;
+}
+
+div.transbox p {
+  margin: 10%;
+  font-weight: bold;
+  color: rgb(65,120,205);
+}
+</style>
+</head>
+<body>
+
+<div class="background">
+  <div class="transbox">
+    <p>Welcome World!</p>
+  </div>
+</div>
+
+
+
+  </style>
+
+<!-- We go to the internet and get the jQuery file to run in our webpage. -->
+<script
+  src="https://code.jquery.com/jquery-3.5.0.min.js"
+  integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+  crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+<a href = "http://localhost:3000/">Home</a> 
+
+  <script>
+      $(document).ready(() => {
+
+       let objectToSend = {
+       note: "Do something.",
+       author:"Nick"
+       }
+          
+        $.post("http://localhost:3000/newNote", objectToSend, (dataToGet) => {
+            console.log(dataToGet);
+        });
+      
+      $.post ("http://localhost:3000/readNotes", {}, (dataToGet) => {
+
+let allNotesArray = dataToGet.notes;
+
+console.log(allNotesArray);
+ });
+
+    });
+
+     
+  </script>
+</body>
+</html>
