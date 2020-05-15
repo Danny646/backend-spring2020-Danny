@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Type Ahead 👀</title>
+  <link rel="stylesheet" href="typeheads.css">
+</head>
+<body>
+<input type = "text" id = "clickstart">
+<input type = "submit" id = "submit"> Click Here  to submit a current note. 
+<form class = "search-form">
+   <input type = "text" class = "search" place-holder="city  or state">
+   <ul class = "suggestions">
+  <li> Filter for a city </li>
+<li> Filter for a state </li>
+
+   </ul>
+    </form>
+
+
+    <script>
+      const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
+      const = "cities"[];
+      fetch (endpoint)
+      .then(blob) =>blob.json())
+      .then(data => cities.push(...data));
+  
+   function findMatch(wordToMatch,cities) {
+   return cities.filter(place=> {
+   // here we need to figure out if the city or state matches what was searched
+   const regex = new RegExp(wordToMatch,"gi");
+   });
+
+   }
+
+   function numberWithCommas(x) {
+   return x.toString().replace(\B(?=(\e{3})+(?!\d))/g, ',');
+}
+
+   }
