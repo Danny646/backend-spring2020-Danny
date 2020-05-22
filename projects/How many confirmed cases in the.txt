@@ -1,0 +1,6 @@
+1.How many confirmed cases in the convid 19 in the U.S, compared to how many  confirmed deaths in the U.S.
+2.How many deaths are confirmed in the convid 19, in the U.S. 
+3.How many cases differ from unknown cases to confirmed cases, in the U.S.
+4. How many convid 19 deaths confirmed in the community Mission, San Francisco, California happen.
+5. The difference between contact deaths and lost deaths from the convid 19 confirmed cases
+How many confirmed cases compared to lost cases convid 19 in the U.S.

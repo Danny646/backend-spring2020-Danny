@@ -5,9 +5,8 @@
   <h2>My First JavaScript</h2>
  <p>  Check it Out!</p>
  <h1> The button element</h1>
- <h2> Javascript prompt.</h2>
- <button type= "button" onclick= myFunction()"> Try this! </button>
-  <p id="demo1"></p>
+
+ <p id="demo1"></p>
  <button type ="button" onclick= "alert('Hello Everyone')">Click Me!` </button>
  <head>
   <meta charset="utf-8"> 
@@ -52,84 +51,12 @@ div.transbox p {
   color: rgb(65,120,205);
 }
 
-/* Popup container - can be anything you want */
-.popup {
-  position: absolute;
-  display: flex;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: auto;
-}
 
-/* The actual popup */
-.popup .popuptext {
-  visibility: hidden;
-  width: 160px;
-  background-color: #555;
-  color: #ccc;
-  text-align: center;
-  border-radius: 6px;
-  padding: 24px 0;
-  position: relative;
-  z-index: 5;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -60px;
-}
 
-/* Popup arrow */
-.popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-
-/* Toggle this class - hide and show the popup */
-.popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s;
-}
-
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-  from {opacity: 100;} 
-  to {opacity: 1;}
-}
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
-}
-</style>
-</head>
-<body style="text-align:center">
-
-<h2>Popup!</h2>
-
-<div class="popup" onclick="myFunction()">Click me to toggle the popup!
-  <span class="popuptext" id="myPopup">A Simple Popup!</span>
-</div>
-
-<script>
-// When the user clicks on div, open the popup
-function myFunction() {
-  var popup = document.getElementById("myPopup");
-  popup.classList.toggle("show");
-}
 
 
 <body>
 
-<div class="background">
-  <div class="transbox">
     <p>Welcome World!</p>
   </div>
 </div>
@@ -144,16 +71,7 @@ function myFunction() {
   integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
   crossorigin="anonymous">
  
-  function myFunction() {
-  var txt;
-  var person = prompt("Please enter your name:", "James Jones");
-  if (person == null || person == "") {
-    txt = "User cancelled the prompt, tyr later.";
-  } else {
-    txt = "Hello " + person + "! How are you today? Have a great day! Enjoy life to it's fullest.";
-  }
-  document.getElementById("demo1").innerHTML = txt;
-}
+  
 
 <body>
 

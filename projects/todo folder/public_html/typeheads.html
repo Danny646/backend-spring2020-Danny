@@ -8,8 +8,7 @@
 <body>
  <p> Click Here For a text box.</p>
    <form class = "search-form">
-   <input type = "text" class = "search" 
-   place-holder="city  or state">
+   <input type = "text" class = "search" place-holder="city  or state">
    <ul class = "suggestions">
   <li> Filter for a city </li>
 <li> Filter for a state </li>
@@ -34,9 +33,8 @@
       const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
       const  cities = [];
       fetch (endpoint)
-      .then(blob) =>blob.json()
-      .then(data => cities.push(...data));
-  
+      .then(blob => blob.json())
+  .then(data => cities.push(...data));
    function findMatch(wordToMatch,cities) {
    return cities.filter(place=> {
    // here we need to figure out if the city or state matches what was searched
@@ -46,8 +44,9 @@
    }
 
    function numberWithCommas(x) {
-   return x.toString().replace(\B(?=(\e{3})+(?!\d))/g, ',');
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
+
 
    function displaysMatches() {
   const matchArray = findMatches(this.value, cities);
@@ -70,6 +69,6 @@ const suggestions = document.querySelector('.suggestions');
 
 searchInput.addEventListener('change', displayMatches);
 searchInput.addEventListener('keyup', displayMatches);
-</script>s
+</script>
 </body>
 </html>
