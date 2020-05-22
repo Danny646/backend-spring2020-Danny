@@ -1,4 +1,4 @@
 1.How many confirmed cases in the convid 19 in the U.S, compared to how many  confirmed deaths in the S.F.
-2.
+2.  Convid confirmed cases from January to March, the contact cases compared to April.
 3.How many cases differ from unknown cases to confirmed cases, in S.F.
 4. Conoid 19, the unknown cases, which month had more of those unknown  cases, from January to April.   5. The confirmed cases of the convid 19, compare the  month of March  to the month of April of which month had more confirmed cases.
