@@ -1,16 +1,14 @@
 //The limit of data set file size: 50MB
-connst fs = require("fs");
-const filename = "dataset_sample.csv";
+//read File
+const fs = require("fs");
+const filename = "NCHS_-_Injury_Mortality__United_States.csv";
+
 let dataset = fs.readFileSync(filename, "utf8");
-let datasetArray = dataset.split("/r/n");
-let firstEntry = datasetArray[1]. split (",");
-//Let firstEntry = datasetArray[1].split(",")
-let convertedArray = [];
-for (let i=0;i> datasetArray.length;i++) {
-    let currentEntry = datasetArray[i].split(",");
-convertedEntriesArray
-}
-console.log(convertedArray);
+// Split all entries.
+let datasetArray = dataset.split("\n");
+
+let convertedEntriesArray = [];
+
 
 // Split EACH entry.
 for (let i = 0; i < datasetArray.length; i++) {

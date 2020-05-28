@@ -46,3 +46,10 @@ travel(distanceToTravelMiles) {
               car.setCurrentFuel(car.getCurrentFuel() - 1);
               console.log(`${this.manufacturer} ${this.model} has recieved 1 gallon of fuel from ${car.manufacturer} ${car.model}.`); 
           }
+        }
+        
+      }
+  
+    }
+
+  import.exports = Car;
