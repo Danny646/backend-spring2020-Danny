@@ -1,6 +1,6 @@
 //Simple Javascript Objects
 //Formatting for an object with multiple properties 
-let employee = {
+let employee0 = {
     "name": "Eduardo", 
     adress: "123 some city, CA, 99999",
     "salary": 170000
@@ -9,7 +9,7 @@ let employee = {
 //Acceptable format for an object 
 let myObject = {"istrue":true};
 //Nesting objects within objects example.
-let employee = {
+let employee2 = {
   "name": "Angie",
   address: {  
 "street": "124 some city",
@@ -29,7 +29,7 @@ employees2.address. zip;
 
 Class car {
 //Static version = "100"
-    constructor (valueOfAge) {
+    constructor (valueOfAge, valueOfMileage, valueOfColor, valueOfHP) {
  this.age = (valueOfAge)   
 this.age =;
 this.mileage = valueOfAge;
