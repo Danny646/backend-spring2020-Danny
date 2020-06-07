@@ -1,0 +1,6 @@
+
+try {
+console.log(nonExistingVariable);
+} catch (error)
+console.log("We tried  to acess this variable,but we couldn't so we do this instead");
+}

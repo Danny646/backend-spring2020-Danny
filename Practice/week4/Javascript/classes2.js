@@ -1,36 +1,63 @@
 class Vehicle {
     constructor(manufacturer, color, topSpeedMPH) {
-  this.speed =0;
-this.topSpeedMPH = topSpeedMPH;
-  this.color = color;
-this.manufacturer = manufacturer;
-}
+    this.topSpeedMPH = topSpeedMPH;
+    this.color = color;
+  this.manufacturer = manufacturer;
+             
+       // Add weight property.
+    }
 
-}
+ }
 
-let newCar = new veichle ("ford","yellow", 120);
-console.log(newCar);
+
 //Inheritance
 class car extends Vehicle {
  constructor(manufacturer, model, color, fuelType, fuelCapacityGallons, mpg, topSpeedMPH, seats)  {
    // super calls the parent's constructor when we build a car object.
-  super(manufacturer,color,topSpeedMPH);
-  this.seats = seats;
-  this.fuelType = fuelType;
-  this.maxTankGallons = fuelCapacityGallons;
-  this. fuelCapacityGallons = fuelCapacityGallons /2;
-  this.license= license;
-  this.model = model;
-  this.mpg = mpg;
+     super(manufacturer,color,topSpeedMPH);
+      this.seats = seats;
+     this.fuelType = fuelType;
+     this.maxTankGallons = fuelCapacityGallons;
+     this. fuelCapacityGallons = fuelCapacityGallons /2;
+     this.license= license;
+     this.model = model;
+     this.mpg = mpg;
   }
 setLicense(licenseNumber) {
-  this.license = licenseNumber;
-  console.log(`The license of the ${this.manufacturer} ${this.model} was updated to ${licenseNumber}`);
-    }
-range() {
-console.log('The license of the ${this.manufafturer} $this.model} can go a total of${'
-(this.fuelCapacityGallons * this.mpg}} miles before refueling.);
+   this.license = licenseNumber;
+    console.log(`The license of the ${this.manufacturer} ${this.model} was updated to ${licenseNumber}`);
+  }  
+  
+
+  getCurrentFuel() {
+    console.log(`${this.manufacturer} ${this.model} has a total of ${this.currentTankGallons} gallons of gas left.`);
+
+    return this.currentTankGallons;
 }
+
+setCurrentFuel(fuelValue) {
+
+    this.currentTankGallons = fuelValue;
+}
+
+refuel(gallons) {
+
+    let availableSpace = this.maxTankGallons - this.currentTankGallons;
+
+    if (gallons > availableSpace) {
+        console.log("There is not enough room in the gas tank to fill it with that many gallons!");
+    } else {
+        this.currentTankGallons = this.currentTankGallons + gallons;
+        // this.currentTankGallons += gallons;
+        console.log(`The gas tank now has ${this.currentTankGallons} gallons of gas.`);
+    }
+    
+}
+
+range() {
+  console.log(`The ${this.manufacturer} ${this.model} can go a total of ${(this.maxTankGallons * this.mpg)} miles before refueling.`);
+  }
+
 
 travel(distanceToTravelMiles) {
   let gallonsToBurn = distanceToTravelMiles / this.mpg;
@@ -61,7 +88,7 @@ travel(distanceToTravelMiles) {
 
       }
 
-  }
+   }
 
 }
 
@@ -77,12 +104,39 @@ this.fuelEconomy = fuelEconomy;
 this.flightAtendant = null;
 this.GassGauge = null;
 
-}
-
-classElectricPlane {
-constructor(model, seats, noGasGauge,transMitter) {
-
-
-
+  }
 
 }
+
+let firstCar = new Car("Honda", "Accord", "black", "gasoline", 14.8, 25, 155, 5);
+
+firstCar.setLicense("8HEX859");
+
+console.log(firstCar);
+
+firstCar.range();
+
+firstCar.travel(2);
+
+firstCar.travel(200);
+firstCar.getCurrentFuel();
+firstCar.refuel(10);
+firstCar.refuel(5);
+firstCar.travel(100);
+firstCar.getCurrentFuel();
+
+let secondCar = new Car("BMW", "328i", "blue", "gasoline", 15, 20, 110, 4);
+
+console.log(secondCar);
+
+secondCar.travel(50);
+secondCar.getCurrentFuel();
+
+
+secondCar.setCurrentFuel(0);
+
+secondCar.refuelUsing(firstCar);
+
+firstCar.getCurrentFuel();
+secondCar.getCurrentFuel();
+
